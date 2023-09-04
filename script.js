@@ -118,6 +118,7 @@ function divide (a, b) {
 let firstOperand = '';
 let currentOperator = null;
 let secondOperand = '';
+let shouldResetScreen = false;
 
 function operate (operator, a, b) {
     a = Number (a)

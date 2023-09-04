@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    outline: none; 
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
