@@ -48,6 +48,36 @@ function deleteNumber() {
       .slice(0, -1)
 }
 
+function appendPoint() {
+    if (shouldResetScreen) resetScreen()
+    if (currentOperationScreen.textContent === '')
+      currentOperationScreen.textContent = '0'
+    if (currentOperationScreen.textContent.includes('.')) return
+    currentOperationScreen.textContent += '.'
+}
+
+function setOperation(operator) {
+    if (currentOperation !== null) evaluate()
+    firstOperand = currentOperationScreen.textContent
+    currentOperation = operator
+    lastOperationScreen.textContent = `${firstOperand} ${currentOperation}`
+    shouldResetScreen = true
+}
+
+function evaluate() {
+    if (currentOperation === null || shouldResetScreen) return
+    if (currentOperation === '÷' && currentOperationScreen.textContent === '0') {
+      alert("You can't divide by 0!")
+      return
+    }
+    secondOperand = currentOperationScreen.textContent
+    currentOperationScreen.textContent = roundResult(
+      operate(currentOperation, firstOperand, secondOperand)
+    )
+    lastOperationScreen.textContent = `${firstOperand} ${currentOperation} ${secondOperand} =`
+    currentOperation = null
+}
+
 function convertOperator(keyboardOperator) {
     if (keyboardOperator === '/') return '÷'
     if (keyboardOperator === '*') return '×'
@@ -71,9 +101,9 @@ function divide (a, b) {
     return a / b;
 };
 
-let firstNumber = '';
+let firstOperand = '';
 let currentOperator = null;
-let secondNumber = '';
+let secondOperand = '';
 
 function operate (operator, a, b) {
     a = Number (a)
