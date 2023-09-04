@@ -15,6 +15,24 @@ pointButton.addEventListener('click', appendPoint)
 
 
 
+numberButtons.forEach((button) =>
+  button.addEventListener('click', () => appendNumber(button.textContent))
+)
+
+operatorButtons.forEach((button) =>
+  button.addEventListener('click', () => setOperation(button.textContent))
+)
+
+function appendNumber(number) {
+  if (currentOperationScreen.textContent === '0' || shouldResetScreen)
+    resetScreen()
+  currentOperationScreen.textContent += number
+}
+
+function resetScreen() {
+    currentOperationScreen.textContent = ''
+    shouldResetScreen = false
+}
 
 function convertOperator(keyboardOperator) {
     if (keyboardOperator === '/') return '÷'
