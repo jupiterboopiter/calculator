@@ -34,6 +34,20 @@ function resetScreen() {
     shouldResetScreen = false
 }
 
+function clear() {
+    currentOperationScreen.textContent = '0'
+    lastOperationScreen.textContent = ''
+    firstOperand = ''
+    secondOperand = ''
+    currentOperation = null
+}
+
+function deleteNumber() {
+    currentOperationScreen.textContent = currentOperationScreen.textContent
+      .toString()
+      .slice(0, -1)
+}
+
 function convertOperator(keyboardOperator) {
     if (keyboardOperator === '/') return '÷'
     if (keyboardOperator === '*') return '×'
