@@ -78,6 +78,10 @@ function evaluate() {
     currentOperation = null
 }
 
+function roundResult(number) {
+    return Math.round(number * 1000) / 1000
+}
+
 function handleKeyboardInput(e) {
     if (e.key >= 0 && e.key <= 9) appendNumber(e.key)
     if (e.key === '.') appendPoint()
