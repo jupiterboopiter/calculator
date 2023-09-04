@@ -22,7 +22,7 @@ function divide (a, b) {
 };
 
 let firstNumber = '';
-let operator = '';
+let currentOperator = null;
 let secondNumber = '';
 
 function operate (operator, a, b) {
@@ -42,3 +42,4 @@ function operate (operator, a, b) {
             return null
     }
 }
+
