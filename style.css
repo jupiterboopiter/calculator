@@ -52,12 +52,24 @@ html {
 
 #clearBtn {
     padding-left: 4.3rem;
-    padding-right: 4.2rem;           
+    padding-right: 4.2rem;
+    transition: .4s;        
+}
+
+#clearBtn:hover {
+    background-color: #bdbdbd;
+    transform: scale(1.1);
 }
 
 #deleteBtn {
     padding-left: 4.3rem;
     padding-right: 4.5rem;
+    transition: .4s;
+}
+
+#deleteBtn:hover {
+    background-color: #e76262e1;
+    transform: scale(1.1);
 }
 
 .screen-current {
@@ -68,5 +80,42 @@ html {
 }
 
 .first-row button {
-    
+    transition: .4s;
+}
+
+.first-row button:hover {
+    background-color: #b1ccd2;
+    transform: scale(1.1);
+}
+
+.second-row button {
+    transition: .4s;
+}
+
+.second-row button:hover {
+    background-color: #abc3cd;
+    transform: scale(1.1);
+}
+
+.third-row button {
+    transition: .4s;
+}
+
+.third-row button:hover {
+    background-color: #8cadb2;
+    transform: scale(1.1);
+}
+
+.fourth-class button {
+    transition: .4s;
+}
+
+.fourth-class button:hover {
+    background-color: #6d86829d;
+    transform: scale(1.1);
+}
+
+#previousScreen {
+    position: fixed;
+    margin-bottom: 5rem;
 }
