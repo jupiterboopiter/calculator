@@ -23,8 +23,9 @@ html {
 
 .calculator {
     background-color: #c8dcdd;
-    padding: 6rem 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     border: .2rem solid #79908e;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.26);
 }
 
 .main .calculator button {
@@ -32,6 +33,7 @@ html {
     margin: .5rem;
     padding: 2rem 2.5rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1px solid gray;
 }
 
 #pointBtn {
@@ -73,7 +75,7 @@ html {
 }
 
 .screen-current {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     margin-bottom: 2rem;
     text-align: right;
     margin-right: 2rem;
@@ -116,6 +118,19 @@ html {
 }
 
 #previousScreen {
-    position: fixed;
-    margin-bottom: 5rem;
+    position: absolute;
+    margin: -2rem;
+    background-color: white;
+}
+
+.main .name {
+    padding-bottom: 5rem;
+    text-align: center;
+    color: gray;
+}
+
+.theScreen {
+    background-color: white;
+    padding-top: 3rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.11);
 }

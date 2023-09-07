@@ -64,7 +64,7 @@ function setOperation(operator) {
     shouldResetScreen = true
 }
 
-lastOperationScreen.setAttribute('style', 'font-size: 1.8rem; color: gray; margin-left: 1.5rem;')
+lastOperationScreen.setAttribute('style', 'font-size: 1.5rem; color: gray; margin-left: 1.5rem; margin-bottom: 3rem;')
 
 function evaluate() {
     if (currentOperation === null || shouldResetScreen) return
